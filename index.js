@@ -11,7 +11,7 @@ mongoose.connect('mongodb://rakeshn:rakesh123@ds141671.mlab.com:41671/hubstaff')
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var routes = require('./routes/jobRoutes');
+var routes = require('./routes/jobroutes');
 routes(app);
 app.listen(port);
 //var http= require('http');
