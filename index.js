@@ -29,39 +29,9 @@ app.listen(port);
 //	console.log("application listening on port",port);
 //});
 
-/* var db = mongoose.connection;
-console.log(db);
-
-db.collection("jobs").insertMany([{
-		rolename: "Senior PHP Developer",
-		qty: 25,
-		skills: ["UI", "UX","Android","Javascript"],
-  		type : ["Full-Time","Part-Time","Hourly"],
-  		company : "Epic Coder",
-  		description : "Looking for talented folks",
-  		state : "illinois",
-  		city : "chicago",
-  		rate : 44,
-  		experiencelevel : "Senior",
-  		country : "United States",
-  		languages : ["English,French"]
-	},
- {
-		rolename: "Senior Nodejs Developer",
-		qty: 25,
-		skills: ["UI", "UX","Android","Javascript","NodeJs"],
-  		type : ["Full-Time","Part-Time","Hourly"],
-  		company : "Epic Coder",
-  		description : "Looking for talented folks",
-  		state : "illinois",
-  		city : "chicago",
-  		rate : 44,
-  		experiencelevel : "Senior",
-  		country : "United States",
-  		languages : ["English,French"]
-	}
-	
-]); */
+//var db = mongoose.connection;
+//console.log(db);
+ 
 //init();
 
 // Use connect method to connect to the Server

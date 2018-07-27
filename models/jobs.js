@@ -13,7 +13,7 @@ var jobSchema = new Schema({
 	city : String,
 	rate : Number,
 	experience : String,
-	country : String,
+	country : [String],
 	language : [String]
 })
 
