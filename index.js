@@ -3,7 +3,8 @@ app = express(),
 port = process.env.PORT || 8080,
 mongoose = require('mongoose'),
 Jobs     = require('./models/jobs'),
-bodyParser = require('body-parser');
+bodyParser = require('body-parser'),
+router=express.Router();
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://rakeshn:rakesh123@ds141671.mlab.com:41671/hubstaff');
@@ -12,12 +13,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 var routes = require('./routes/jobroutes');
+var topJobs = require('./routes/topjobs');
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
 routes(app);
+topJobs(app);
 
 app.listen(port);
 //var http= require('http');
@@ -30,6 +33,13 @@ app.listen(port);
 //});
 
 //var db = mongoose.connection;
+//console.log(db);
+
+//db.collection('jobs').update({},{$set : {"clicks":1}},false,true)
+
+
+//mongoose.jobs.update({}, {$set: {"clicks": 1}}, false, true)
+
 //console.log(db);
  
 //init();

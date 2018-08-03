@@ -3,9 +3,6 @@ var mongoose = require('mongoose');
 var mongodb = require("mongodb");
 var BSONRegExp = mongodb.BSONRegExp,
 Jobs = mongoose.model('Jobs');
-//db.users.find(name: new RegExp(search， ‘i')) //For substring search, case insensitive
-
-
 exports.list_all_jobs = function(req,res){
 	 var payRate = undefined!==req.query["payRate"]&&req.query["payRate"]!=""? req.query["payRate"].split(","): "";
 	 console.log(payRate);
@@ -115,4 +112,6 @@ exports.list_all_jobs = function(req,res){
 		res.json(job);
 	});	
 }
+
+
 

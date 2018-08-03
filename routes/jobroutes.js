@@ -4,3 +4,4 @@ module.exports = function(app){
 	app.route('/jobs')
 	.get(jobList.list_all_jobs)
 }
+
