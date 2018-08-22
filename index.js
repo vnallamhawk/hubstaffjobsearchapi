@@ -35,6 +35,96 @@ app.listen(port);
 //var db = mongoose.connection;
 //console.log(db);
 
+var db = mongoose.connection;
+console.log(db);
+ db.collection("jobs").insertMany([{
+		rolename: "Junior .Net Developer",
+		qty: 25,
+		skills: [".Net"],
+  		type : ["Hourly"],
+  		company : "Epic Coder",
+  		description : "Looking for .Net folks",
+  		state : "san francisco",
+  		city : "california",
+  		rate : 80,
+  		experiencelevel : "Junior",
+  		country : "United States",
+  		languages : ["English"]
+	},
+ {
+		rolename: "Senior Scala Developer",
+		qty: 25,
+		skills: ["Scala"],
+  		type : ["Part-Time"],
+  		company : "Apple",
+  		description : "Looking for Scala Developer",
+  		state : "illinois",
+  		city : "chicago",
+  		rate : 44,
+  		experiencelevel : "Senior",
+  		country : "United States",
+  		languages : ["French"]
+	},
+	{
+		rolename: "Junior Mainframe Developer",
+		qty: 25,
+		skills: ["Mainframe"],
+  		type : ["Part-Time"],
+  		company : "Apple",
+  		description : "Looking for mainframe Developer",
+  		state : "illinois",
+  		city : "chicago",
+  		rate : 34,
+  		experiencelevel : "Junior",
+  		country : "United States",
+  		languages : ["English"]
+	},
+	{
+		rolename: "Junior Abinishio Developer",
+		qty: 25,
+		skills: ["abhinishio"],
+  		type : ["Part-Time"],
+  		company : "Apple",
+  		description : "Looking for mainframe Developer",
+  		state : "los angeles",
+  		city : "california",
+  		rate : 34,
+  		experiencelevel : "Junior",
+  		country : "United States",
+  		languages : ["English"]
+	},
+		{
+		rolename: "SQL Developer",
+		qty: 25,
+		skills: ["SQL"],
+  		type : ["Part-Time"],
+  		company : "Apple",
+  		description : "Looking for sql Developer",
+  		state : "los angeles",
+  		city : "california",
+  		rate : 30,
+  		experiencelevel : "Junior",
+  		country : "United States",
+  		languages : ["English"]
+	},
+	{
+		rolename: "Junior Java Developer",
+		qty: 25,
+		skills: ["Java"],
+  		type : ["Part-Time"],
+  		company : "Apple",
+  		description : "Looking for sql Developer",
+  		state : "los angeles",
+  		city : "california",
+  		rate : 30,
+  		experiencelevel : "Junior",
+  		country : "United States",
+  		languages : ["English"]
+	}
+	
+]);
+
+
 //db.collection('jobs').update({},{$set : {"clicks":1}},false,true)
 
 
